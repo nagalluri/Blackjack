@@ -1,4 +1,4 @@
-package blackjack;
+package Blackjack;
 
 public class Card {
 	private String value;
@@ -16,16 +16,23 @@ public class Card {
 	* A method that retrieves a card's value
 	* @param - c is the card whose value is being retrieved
 	*/
-	public String getVal(Card c) {
-		return c.value;
+	public String getVal() {
+		return this.value;
 	}
 
 	/**
 	* A method that retrieves a card's suit
 	* @param - c is the card whose suit is being retrieved
 	*/
-	public String getSuit(Card c) {
-		return c.suit;
+	public String getSuit() {
+		return this.suit;
+	}
+
+	/**
+	* A method that prints the suit and value of the card
+	*/
+	public void print() {
+		System.out.println(this.value + " of " + this.suit);
 	}
 
 	public static void main(String[] args) {
