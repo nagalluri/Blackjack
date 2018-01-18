@@ -14,7 +14,6 @@ public class Card {
 
 	/**
 	* A method that retrieves a card's value
-	* @param - c is the card whose value is being retrieved
 	*/
 	public String getVal() {
 		return this.value;
@@ -22,7 +21,6 @@ public class Card {
 
 	/**
 	* A method that retrieves a card's suit
-	* @param - c is the card whose suit is being retrieved
 	*/
 	public String getSuit() {
 		return this.suit;

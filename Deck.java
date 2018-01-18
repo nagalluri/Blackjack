@@ -24,13 +24,13 @@ public class Deck {
 			for (int i = 1; i <= 13; i++) {
 				String value = Integer.toString(i);
 				if (i == 11) {
-					value = "Jack";
+					value = "J";
 				} else if (i == 12) {
-					value = "Queen";
+					value = "Q";
 				} else if (i == 13) {
-					value = "King";
+					value = "K";
 				} else if (i == 1) {
-					value = "Ace";
+					value = "A";
 				}
 				Card c = new Card(suit, value);
 				cards.add(c);
