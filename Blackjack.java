@@ -6,7 +6,7 @@ import Blackjack.Hand;
 import java.util.Scanner;
 
 /** 
-* Input file description here.
+* This the main class that operates the different elements of the Blackjack game
 * @author Nag Alluri
 */
 public class Blackjack {
@@ -27,7 +27,7 @@ public class Blackjack {
 	}
 
 	/**
-	* A new method
+	* A method that deals the initial cards (2 to the player, 1 to the dealer)
 	*/
 	public void deal() {
 		Card c1 = this.deck.draw();
@@ -40,7 +40,7 @@ public class Blackjack {
 	}
 
 	/**
-	* A new method
+	* A method that prints the dealer's cards and your cards
 	*/
 	public void print() {
 		System.out.println("---------------------*****--------------------");
@@ -58,18 +58,23 @@ public class Blackjack {
 	}
 
 	/**
-	* A new method
+	* A method that checks current balance and prints it out
 	*/
-	public void checkbalance() {
-		if (this.balance <= 0) {
-			System.out.println("OUT OF MONEY!!!!");
-			System.out.println("GAME OVER!!!");
-		} else {
-			System.out.println("Current Balance: " + Integer.toString(this.balance));
-			System.out.println("Make a wager to begin (min: 10)"); 
-		}	
-	}
+	// public void checkbalance() {
+	// 	if (this.balance <= 0) {
+	// 		System.out.println("OUT OF MONEY!!!!");
+	// 		System.out.println("GAME OVER!!!");
+	// 	} else {
+	// 		System.out.println("Current Balance: " + Integer.toString(this.balance));
+	// 		System.out.println("Make a wager to begin (min: 10)"); 
+	// 	}	
+	// }
 
+
+	/**
+	* A helper method that checks if a string can be parsed as an int
+	* @param str - the string that is being checked
+	*/
 	public static boolean isInteger(String str) {
 	    try {
 	        Integer.parseInt(str);
