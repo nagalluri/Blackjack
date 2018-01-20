@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 
 /** 
-* Input file description here.
+* A class that builds a collection of playing cards
 * @author Nag Alluri
 */
 public class Hand {

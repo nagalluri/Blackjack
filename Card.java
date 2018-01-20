@@ -1,11 +1,17 @@
 package Blackjack;
 
+/** 
+* A class that builds a basic playing card
+* @author Nag Alluri
+*/
 public class Card {
 	private String value;
 	private String suit;
 
 	/** 
 	* A constructor for the Deck class
+	* @param suit - the suit of the card (Ex: "Hearts")
+	* @param value - the value of the card (Ex: "Ace")
 	*/
 	public Card(String suit, String value) {
 		this.value = value;
