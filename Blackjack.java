@@ -86,6 +86,7 @@ public class Blackjack {
 		// System.out.println("Welcome to Blackjack!!!");
 		// System.out.println("Your current balance is 1000");
 		// System.out.println("Make a wager to begin (min: 10)");
+		System.out.println("Type 'n' to start a new game!");
 		Blackjack b = new Blackjack();
 		int wager = 0;
 		while (true) {
@@ -110,6 +111,7 @@ public class Blackjack {
                 	b.print();
                 	if (b.player.value == 21) {
             			System.out.println("YOU WIN!!!");
+            			System.out.println("Type 'n' to start a new game!");
             			// b.balance += wager;
             			// b.checkbalance();
             		} else {
@@ -123,10 +125,12 @@ public class Blackjack {
                 		b.print();
                 		if (b.player.value == 21) {
                 			System.out.println("YOU WIN!!!");
+                			System.out.println("Type 'n' to start a new game!");
                 			// b.balance += wager;
                 			// b.checkbalance();
                 		} else if (b.player.value > 21) {
                 			System.out.println("BUSTED!!!");
+                			System.out.println("Type 'n' to start a new game!");
                 			// b.balance -= wager;
                 			// b.checkbalance();  
                 		} else {
@@ -144,17 +148,20 @@ public class Blackjack {
 	                		b.print();
 	                		if (((b.dealer.value > b.player.value) && (b.dealer.value <= 21)) || (b.dealer.value == 21)) {
 	                			System.out.println("DEALER WINS!!!");
+	                			System.out.println("Type 'n' to start a new game!");
 	                			// b.balance -= wager;
 	                			// b.checkbalance(); 
                 				break;
 	                		} else if ((b.dealer.value == b.player.value) && (b.dealer.value >= 16)) {
 	                			System.out.println("PUSH!!!");
+	                			System.out.println("Type 'n' to start a new game!");
                 				// b.checkbalance();  
                 				break; 
 	                		}
                 		}
 						if (b.dealer.value > 21) {
 							System.out.println("YOU WIN!!!");
+							System.out.println("Type 'n' to start a new game!");
                 			// b.balance += wager;
                 			// b.checkbalance();
                 		}
