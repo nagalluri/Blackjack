@@ -85,7 +85,7 @@ public class Blackjack {
 	}
 
 	/**
-	* Main method
+	* Main method - Takes in the different commands and operates the appropriate method
 	*/
 	public static void main(String[] args) {
 		System.out.println("Welcome to Blackjack!!!");
