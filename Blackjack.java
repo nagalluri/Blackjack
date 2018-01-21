@@ -192,7 +192,7 @@ public class Blackjack {
                 	System.out.println("Invalid wager");
                 	break;
                  case "BettingError":
-                	System.out.println("Place a wager");
+                	System.out.println("Make a wager to begin (min: 10)");
                 	break;
                 default:
                     System.out.println("Type 'n' to start a new game!");  
