@@ -94,6 +94,7 @@ public class Blackjack {
 		Blackjack b = new Blackjack();
 		int wager = 0;
 		int currbalance = b.balance;
+		boolean wagered = false;
 		while (true) {
 			System.out.print("> ");
 			Scanner scanner = new Scanner(System.in);
@@ -106,8 +107,12 @@ public class Blackjack {
             	if ((wager < 10) || (wager > b.balance)) {
             		command = "Error";
             	} else {
+            		wagered = true;
             		command = "n";
             	}
+            }
+            if (!wagered) {
+            	command = "BettingError";
             }
             switch (command) {
                 case "n":
@@ -185,6 +190,9 @@ public class Blackjack {
 
                 case "Error":
                 	System.out.println("Invalid wager");
+                	break;
+                 case "BettingError":
+                	System.out.println("Place a wager");
                 	break;
                 default:
                     System.out.println("Type 'n' to start a new game!");  
