@@ -94,6 +94,7 @@ public class Blackjack {
 		System.out.println("Type 'n' to start a new game!");
 		Blackjack b = new Blackjack();
 		int wager = 0;
+		int currbalance = b.balance;
 		while (true) {
 			System.out.print("> ");
 			Scanner scanner = new Scanner(System.in);
@@ -111,13 +112,17 @@ public class Blackjack {
             }
             switch (command) {
                 case "n":
-                	b = new Blackjack();                	
+                	System.out.println(wager);
+                	b = new Blackjack();
+                	System.out.println(currbalance);
+                	b.balance = currbalance;                	
                 	b.deal();
                 	b.print();
                 	if (b.player.value == 21) {
             			System.out.println("YOU WIN!!!");
             			System.out.println("Type 'n' to start a new game!");
-            			b.balance += wager;
+            			currbalance += wager;
+            			b.balance = currbalance;  
             			b.checkbalance();
             		} else {
             			System.out.println("Type 'h' to hit or 's' to stand");	
@@ -131,12 +136,14 @@ public class Blackjack {
                 		if (b.player.value == 21) {
                 			System.out.println("YOU WIN!!!");
                 			System.out.println("Type 'n' to start a new game!");
-                			b.balance += wager;
+                			currbalance += wager;
+                			b.balance = currbalance;  
                 			b.checkbalance();
                 		} else if (b.player.value > 21) {
                 			System.out.println("BUSTED!!!");
                 			System.out.println("Type 'n' to start a new game!");
-                			b.balance -= wager;
+                			currbalance -= wager;
+                			b.balance = currbalance;  
                 			b.checkbalance();  
                 		} else {
                 			System.out.println("Type 'h' to hit or 's' to stand");
@@ -154,7 +161,8 @@ public class Blackjack {
 	                		if (((b.dealer.value > b.player.value) && (b.dealer.value <= 21)) || (b.dealer.value == 21)) {
 	                			System.out.println("DEALER WINS!!!");
 	                			System.out.println("Type 'n' to start a new game!");
-	                			b.balance -= wager;
+	                			currbalance -= wager;
+	                			b.balance = currbalance;  
 	                			b.checkbalance(); 
                 				break;
 	                		} else if ((b.dealer.value == b.player.value) && (b.dealer.value >= 16)) {
@@ -167,7 +175,8 @@ public class Blackjack {
 						if (b.dealer.value > 21) {
 							System.out.println("YOU WIN!!!");
 							System.out.println("Type 'n' to start a new game!");
-                			b.balance += wager;
+                			currbalance += wager;
+                			b.balance = currbalance;  
                 			b.checkbalance();
                 		}
                 	} catch(IllegalArgumentException a) {
