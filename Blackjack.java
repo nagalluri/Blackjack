@@ -103,7 +103,6 @@ public class Blackjack {
             String command = rawTokens[0];
             if (isInteger(command)) {
             	wager = Integer.parseInt(command);
-            	System.out.println(wager);
             	if ((wager < 10) || (wager > b.balance)) {
             		command = "Error";
             	} else {
@@ -116,9 +115,7 @@ public class Blackjack {
             }
             switch (command) {
                 case "n":
-                	System.out.println(wager);
                 	b = new Blackjack();
-                	System.out.println(currbalance);
                 	b.balance = currbalance;                	
                 	b.deal();
                 	b.print();
